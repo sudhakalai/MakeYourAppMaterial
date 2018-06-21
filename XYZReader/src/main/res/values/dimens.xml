@@ -1,11 +1,28 @@
 <resources>
     <!-- detail -->
-    <dimen name="detail_title_text_size">32sp</dimen>
-    <dimen name="detail_body_text_size">22sp</dimen>
+    <dimen name="detail_title_text_size">34sp</dimen>
+    <dimen name="detail_body_text_size">16sp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
 
-    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+
+    <dimen name="appbar_height">112dp</dimen>
+    <dimen name="elevation_4">4dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="title_margin">72dp</dimen>
+    <dimen name="image_button_width">56dp</dimen>
+    <dimen name="fab_dimen">56dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+    <dimen name="margin_top">200dp</dimen>
+    <dimen name="title_1">16sp</dimen>
+    <dimen name="title_2">14sp</dimen>
+    <dimen name="card_height">216dp</dimen>
+    <dimen name="card_image_height">144dp</dimen>
+
 
 </resources>

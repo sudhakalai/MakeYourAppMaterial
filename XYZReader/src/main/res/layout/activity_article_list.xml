@@ -8,8 +8,9 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_height="@dimen/appbar_height"
         android:id="@+id/app_bar_layout"
+        android:elevation="@dimen/elevation_4"
         android:background="@color/colorPrimary">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -18,8 +19,16 @@
             android:layout_height="match_parent"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-            app:expandedTitleMarginStart="72dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo"
+                android:paddingTop="50dp"
+                android:paddingStart="@dimen/padding_16"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/app_name" />
 
 
             <android.support.v7.widget.Toolbar
@@ -27,16 +36,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:contentInsetStart="72dp"
-                app:layout_collapseMode="pin">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_collapseMode="pin"/>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/logo"
-                    android:contentDescription="@string/app_name" />
-
-            </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -46,7 +48,8 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
@@ -55,11 +58,11 @@
             android:clipToPadding="false"
             android:scrollbarStyle="outsideOverlay"
             android:background="@color/photo_placeholder"
-            android:paddingTop="116dp"
-            android:paddingLeft="@dimen/list_side_margin"
-            android:paddingRight="@dimen/list_side_margin"
-            android:paddingBottom="28dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:paddingTop="@dimen/padding_8"
+            android:paddingLeft="@dimen/padding_8"
+            android:paddingRight="@dimen/padding_8"
+            android:paddingBottom="@dimen/padding_24"
+            />
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
